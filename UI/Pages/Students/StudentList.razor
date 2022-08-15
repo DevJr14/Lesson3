@@ -1,0 +1,20 @@
+﻿@page "/student-list"
+
+<MudButton Variant="Variant.Filled" OnClick="InvokeAddEditDialog" Color="Color.Primary">Add New Student</MudButton>
+
+<MudTable Items="@Students" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Warning">
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>Firstname</MudTh>
+        <MudTh>Age</MudTh>
+        <MudTh>Actions</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Id">@context.Id</MudTd>
+        <MudTd DataLabel="Firstname">@context.Firstname</MudTd>
+        <MudTd DataLabel="Age">@context.Age</MudTd>
+        <MudTd DataLabel="Actions">
+            <MudButton>Edit</MudButton>
+        </MudTd>
+    </RowTemplate>
+</MudTable>

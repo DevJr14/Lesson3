@@ -1,0 +1,20 @@
+﻿<MudForm @ref="form" Model="StudentModel">
+    <MudDialog>
+        <TitleContent>
+            <MudText>Add Student</MudText>
+        </TitleContent>
+        <DialogContent>
+            <MudGrid>
+                <MudItem xs="12" sm="12" md="6">
+                    <MudTextField @bind-Value="@StudentModel.Firstname" Label="Firstname" Variant="Variant.Outlined"/>
+                </MudItem>
+                <MudItem xs="12" sm="12" md="6">
+                    <MudNumericField @bind-Value="@StudentModel.Age" Label="Age" Variant="Variant.Outlined"/>
+                </MudItem>
+            </MudGrid>
+        </DialogContent>
+        <DialogActions>
+            <MudButton Color="Color.Primary" OnClick="@SaveAsync">Save</MudButton>
+        </DialogActions>
+    </MudDialog>
+</MudForm>
