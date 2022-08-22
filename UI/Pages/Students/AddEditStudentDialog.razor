@@ -1,7 +1,14 @@
 ﻿<MudForm @ref="form" Model="StudentModel">
     <MudDialog>
         <TitleContent>
-            <MudText>Add Student</MudText>
+            @if (StudentModel.Id == 0)
+            {
+                <MudText>Add Student</MudText>                
+            }
+            else
+            {
+                <MudText>Update Student</MudText>
+            }
         </TitleContent>
         <DialogContent>
             <MudGrid>

@@ -14,7 +14,8 @@
         <MudTd DataLabel="Firstname">@context.Firstname</MudTd>
         <MudTd DataLabel="Age">@context.Age</MudTd>
         <MudTd DataLabel="Actions">
-            <MudButton>Edit</MudButton>
+            <MudButton OnClick="@(() => InvokeAddEditDialogForEdit(context.Id))">Edit</MudButton>
+            <MudButton Color="Color.Error" OnClick="@(() => InvokeDeleteConfirmationDialog(context.Id))">Delete</MudButton>
         </MudTd>
     </RowTemplate>
 </MudTable>

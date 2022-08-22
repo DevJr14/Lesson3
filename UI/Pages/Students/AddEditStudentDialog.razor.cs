@@ -15,7 +15,17 @@ namespace UI.Pages.Students
 
         private async Task SaveAsync()
         {
-            await StudentService.AddNewAsync(StudentModel);
+            if (StudentModel.Id == 0)
+            {
+                //Adding
+                await StudentService.AddNewAsync(StudentModel);
+            }
+            else
+            {
+                //Updating
+                await StudentService.UpdateAsync(StudentModel);
+            }
+
             MudDialog.Close();
         }
     }

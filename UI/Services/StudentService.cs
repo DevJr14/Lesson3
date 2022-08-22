@@ -19,9 +19,9 @@ namespace UI.Services
             await _httpClient.PostAsJsonAsync("api/students/add-new", student);
         }
 
-        public Task DeleteAsync(Student student)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            await _httpClient.DeleteAsync("api/students/delete/" + id);
         }
 
         public async Task<List<Student>> GetAllAsync()

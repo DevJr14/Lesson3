@@ -7,7 +7,7 @@ namespace UI.Services
         Task<List<Student>> GetAllAsync();
         Task AddNewAsync(Student student);
         Task UpdateAsync(Student student);
-        Task DeleteAsync(Student student);
+        Task DeleteAsync(int id);
         Task<Student> GetByIdAsync(int id);
     }
 }
