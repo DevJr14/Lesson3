@@ -10,5 +10,6 @@ namespace Lesson3.DbContexts
         {}
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Parent> Parents { get; set; }
     }
 }
